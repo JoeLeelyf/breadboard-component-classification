@@ -13,7 +13,7 @@ from collections import deque
             e.g. [('SourceV', 0, 2), ('Resistor', 0, 1), ('Capacitor', 1, 2), ('SourceI', 1, 2)]
     output: path of the image
 '''
-def draw_circuit(circuits_info, save_dir, save_name):
+def draw_circuit(circuits_info, result_path):
     d = schemdraw.Drawing()
     # get circuits info
     # circuits = circuits_info
@@ -85,7 +85,7 @@ def draw_circuit(circuits_info, save_dir, save_name):
                 # end_dots[circuit[2]] = t.end
                 circuit = circuit_queue[circuit[2]].get()   
 
-    save_path = os.path.join(save_dir, save_name)
+    save_path = result_path
     d.draw(show=False)
     d.save(save_path)
     return save_path
