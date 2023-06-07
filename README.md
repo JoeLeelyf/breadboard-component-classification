@@ -85,13 +85,13 @@ Then open the "breadoard-elements-detect.ipynb" file, all results are showed in 
 
 ### Part I: Elements Segment
 
-This part was accomplished using [YoloV7 model]([WongKinYiu/yolov7: Implementation of paper - YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors (github.com)](https://github.com/WongKinYiu/yolov7)). Using yolov7.pt as the pretrained weights, after 600 epcho, this model's outcome is as below:
+This part was accomplished using YoloV7. Using yolov7.pt as the pretrained weights, after 600 epcho, this model's outcome is as below:
 
-<img src="/Users/liyifei/Downloads/下载.png" alt="下载" style="zoom:36%;" />
+<img src="https://other-file-access-by-internet.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD.png?Expires=1686145078&OSSAccessKeyId=TMP.3Kh8NuFbJtfZeGMMM4noJ1grHcc1EqP71VYy2mrD6rAMP6o9wXptiitJxCs7GHod8mqEMLLckNoveKYictMDc67bVws8PR&Signature=CVMB%2FwCMrhJLmT8maSiR6253xlo%3D" alt="下载" style="zoom:36%;" />
 
 Result on our test sets:
 
-<img src="/Users/liyifei/Library/Application Support/typora-user-images/截屏2023-06-07 20.30.12.png" alt="截屏2023-06-07 20.30.12" style="zoom:50%;" />
+<img src="https://other-file-access-by-internet.oss-cn-beijing.aliyuncs.com/%E6%88%AA%E5%B1%8F2023-06-07%2020.30.12.png?Expires=1686145063&OSSAccessKeyId=TMP.3Kh8NuFbJtfZeGMMM4noJ1grHcc1EqP71VYy2mrD6rAMP6o9wXptiitJxCs7GHod8mqEMLLckNoveKYictMDc67bVws8PR&Signature=YyQV2WQIRhM7Csb%2BcTYTwILuzIk%3D" alt="截屏2023-06-07 20.30.12" style="zoom:50%;" />
 
 Datasets were uploaded to Kaggle: [BreadBoard Eletronic Component Datasets | Kaggle](https://www.kaggle.com/datasets/lyfjoelee/breadboard-eletronic-component-datasets)
 
@@ -103,7 +103,7 @@ The fixed connections on a breadboard determine that certain holes are on the sa
 
 To begin mapping out the circuit, we use cv2.findContours() with specific filters to identify all the holes on the breadboard. From there, we can determine which holes are on the same voltage level. The results are shown below, where holes on the same voltage level are enclosed by red rectangles.
 
-<img src="/Users/liyifei/Library/Application Support/typora-user-images/image-20230607205008715.png" alt="image-20230607205008715" style="zoom:50%;" />
+<img src="https://other-file-access-by-internet.oss-cn-beijing.aliyuncs.com/output.png?Expires=1686144987&OSSAccessKeyId=TMP.3Kh8NuFbJtfZeGMMM4noJ1grHcc1EqP71VYy2mrD6rAMP6o9wXptiitJxCs7GHod8mqEMLLckNoveKYictMDc67bVws8PR&Signature=Utk1rNu6Wa7oregnw68Pf6uSPhY%3D" style="zoom:50%;" />
 
 Each column or row enclosed by a red rectangle represents a different voltage level, unless they are connected by a wire. By determining the position of the bounding box (provided by Yolo) corresponding to the column or row, we can abstract the connection relationship of the circuits.
 
@@ -119,4 +119,4 @@ The results are presented in the following format:
 
 This part uses python model SchewDraw. 
 
-![output1](/Users/liyifei/Downloads/output1.png)
+<img src="https://other-file-access-by-internet.oss-cn-beijing.aliyuncs.com/output1.png?Expires=1686145015&OSSAccessKeyId=TMP.3Kh8NuFbJtfZeGMMM4noJ1grHcc1EqP71VYy2mrD6rAMP6o9wXptiitJxCs7GHod8mqEMLLckNoveKYictMDc67bVws8PR&Signature=Ao9VdY%2FBCgXDuyrNvXkm952ckcU%3D" style="zoom:70%;" />
