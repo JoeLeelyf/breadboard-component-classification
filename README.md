@@ -117,6 +117,6 @@ The results are presented in the following format:
 
 ### Part III: Draw Circuit From The Abstract Connection Relationship
 
-This part uses python model SchewDraw. 
+This part of the project uses the Python model SchewDraw. However, it's important to note that the same topology structure of a circuit can correspond to many different types of real circuits. As a result, the drawing picture may vary.
 
 <img src="https://other-file-access-by-internet.oss-cn-beijing.aliyuncs.com/output1.png?Expires=1686145015&OSSAccessKeyId=TMP.3Kh8NuFbJtfZeGMMM4noJ1grHcc1EqP71VYy2mrD6rAMP6o9wXptiitJxCs7GHod8mqEMLLckNoveKYictMDc67bVws8PR&Signature=Ao9VdY%2FBCgXDuyrNvXkm952ckcU%3D" style="zoom:70%;" />
